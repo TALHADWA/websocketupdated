@@ -27,19 +27,14 @@ socket.on('connection', (socket) => {
     if(signin[checkrecipent]
       )
       {
-        console.log("contains");
+        socket.to(signin[checkrecipent].socket).emit("/message",msg);
+        
+     
       }
       else{
         console.log("not contains");
       }
-    // for (const check in signin) {
-    //   console.log(check);
-    //   if (signin[check] === checkrecipent) {
-    //     signin[check].socket.emit("/messg", msg);
-    //   } else {
-    //     console.log("not found");
-    //   }
-    // }
+  
   });
 });
 
