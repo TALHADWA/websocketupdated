@@ -32,7 +32,7 @@ socket.on('connection', (socket) => {
      
       }
       else{
-        socket.emit("/message",msg);
+        socket.broadcast.emit("/message", msg);
         console.log("not contains");
       }
   
