@@ -27,8 +27,8 @@ socket.on('connection', (socket) => {
     if(signin[checkrecipent]
       )
       {
-      var dd=  socket.to(signin[checkrecipent].socket).emit("/message",msg);
-     
+      var dd=  signin[checkrecipent].socket.emit("/message",msg);
+     console.log(dd);
      
       }
       else{
