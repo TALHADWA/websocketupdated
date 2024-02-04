@@ -28,7 +28,7 @@ socket.on('connection', (socket) => {
       )
       {
         socket.to(signin[checkrecipent].socket).emit("/message",msg);
-        
+        socket.emit("/message",msg);
      
       }
       else{
