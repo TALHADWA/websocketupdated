@@ -27,12 +27,12 @@ socket.on('connection', (socket) => {
     if(signin[checkrecipent]
       )
       {
-        socket.to(signin[checkrecipent].socket).emit("/message",msg);
-        socket.emit("/message",msg);
+      var dd=  socket.to(signin[checkrecipent].socket).emit("/message",msg);
+     
      
       }
       else{
-        socket.broadcast.emit("/message", msg);
+       
         console.log("not contains");
       }
   
